@@ -64,3 +64,43 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+ installation instructions 
+
+ git url : https://github.com/julisavani/interview-project
+
+ git clone : https://github.com/julisavani/interview-project.git
+
+ use postman collection 
+
+ start server : php artisan serve 
+ migrate database :  php artisan migrate
+ seeding data  : php artisan db:seed
+ use credential : email : john@gmail.com , password : password
+
+ set header in postman : Accept -> application/json
+
+ php artisan storage:link
+
+ register user : http://127.0.0.1:8000/api/register [email password ,name]
+ login user : http://127.0.0.1:8000/api/login [email , password]
+ create task : http://127.0.0.1:8000/api/task : subject:sub1
+                                                description:desc1
+                                                startDate:2023-06-10
+                                                dueDate:2023-06-14
+                                                status:New
+                                                priority:High
+                                                notes[0][note]:note1
+                                                notes[0][subject]:subject1
+                                                notes[0][attachments][0] : 'file Datta'
+                                                notes[1][note]:note2
+                                                notes[1][subject]:suject2
+                                                notes[1][attachments][0] : 'file Datta'
+
+get task data : http://127.0.0.1:8000/api/task?priority=High&due_date=2023-06-10,2023-06-14&status=New&notes
+
+
+ 
+ 
+ 
