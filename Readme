@@ -1,4 +1,11 @@
  installation instructions 
+
+ git url : https://github.com/julisavani/interview-project
+
+ git clone : https://github.com/julisavani/interview-project.git
+
+ use postman collection 
+
  start server : php artisan serve 
  migrate database :  php artisan migrate
  seeding data  : php artisan db:seed
@@ -14,8 +21,8 @@
                                                 description:desc1
                                                 startDate:2023-06-10
                                                 dueDate:2023-06-14
-                                                status:1
-                                                priority:2
+                                                status:New
+                                                priority:High
                                                 notes[0][note]:note1
                                                 notes[0][subject]:subject1
                                                 notes[0][attachments][0] : 'file Datta'
@@ -24,6 +31,8 @@
                                                 notes[1][attachments][0] : 'file Datta'
 
 get task data : http://127.0.0.1:8000/api/task?priority=High&due_date=2023-06-10,2023-06-14&status=New&notes
+
+
  
  
  
