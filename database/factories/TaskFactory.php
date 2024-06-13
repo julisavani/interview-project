@@ -17,15 +17,18 @@ class TaskFactory extends Factory
      */
     public function definition(): array
     {
-        $numbers = [1,2,3];
-        $randomIndex = array_rand($numbers);
+        $priorityEnum = ['High','Medium','Low'];
+        $randomPriorityIndex = array_rand($priorityEnum);
+        $statusEnum = ['High','Medium','Low'];
+        $randomStatusIndex = array_rand($statusEnum);
         return [
             'user_id' => User::inRandomOrder()->first()->id, // Create a related user and get its ID
             'subject' => $this->faker->sentence,
             'description' => $this->faker->paragraph,
             'startDate' => $this->faker->date('Y-m-d'),
             'dueDate' => $this->faker->date('Y-m-d'),
-            'priority' => $numbers[$randomIndex],
+            'priority' => $priorityEnum[$randomPriorityIndex],
+            'status' => $statusEnum[$randomStatusIndex],
         ];
     }
 }
