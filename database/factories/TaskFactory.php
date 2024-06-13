@@ -19,7 +19,7 @@ class TaskFactory extends Factory
     {
         $priorityEnum = ['High','Medium','Low'];
         $randomPriorityIndex = array_rand($priorityEnum);
-        $statusEnum = ['High','Medium','Low'];
+        $statusEnum = ['New','Incomplete','Complete'];
         $randomStatusIndex = array_rand($statusEnum);
         return [
             'user_id' => User::inRandomOrder()->first()->id, // Create a related user and get its ID
